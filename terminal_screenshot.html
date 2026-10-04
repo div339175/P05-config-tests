@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #0d1117;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .terminal-window {
+    width: 860px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+    overflow: hidden;
+  }
+  .terminal-header {
+    background: #2d2d2d;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #333;
+  }
+  .traffic-lights {
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .red { background: #ff5f56; border: 1px solid #e0443e; }
+  .yellow { background: #ffbd2e; border: 1px solid #dea123; }
+  .green { background: #27c93f; border: 1px solid #1aab29; }
+  .title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+  }
+  .terminal-body {
+    padding: 16px 20px 24px 20px;
+    font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #cccccc;
+    white-space: pre;
+  }
+  .prompt {
+    color: #5af78e;
+  }
+  .user {
+    color: #57c7ff;
+  }
+  .path {
+    color: #ff6ac1;
+  }
+  .cmd {
+    color: #eff0f1;
+    font-weight: 600;
+  }
+  .passed {
+    color: #5af78e;
+    font-weight: 600;
+  }
+  .summary {
+    color: #5af78e;
+    font-weight: 600;
+  }
+  .dim {
+    color: #888888;
+  }
+  .cyan {
+    color: #57c7ff;
+  }
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: #cccccc;
+    vertical-align: middle;
+    margin-left: 4px;
+    animation: blink 1s step-start infinite;
+  }
+</style>
+</head>
+<body>
+<div class="terminal-window">
+  <div class="terminal-header">
+    <div class="traffic-lights">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+    </div>
+    <div class="title">divakarmaurya — zsh — 88×26</div>
+  </div>
+  <div class="terminal-body">
+<span class="user">divakarmaurya@MacBook-Pro</span> <span class="path">work</span> <span class="prompt">%</span> <span class="cmd">pytest -v</span>
+<span class="dim">============================= test session starts ==============================</span>
+platform darwin -- Python 3.13.5, pytest-8.3.4, pluggy-1.5.0 -- /opt/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/divakarmaurya/Downloads/P05-config-tests/work
+plugins: anyio-4.7.0
+collecting ... collected 10 items
+
+test_model.py::test_rain_never_makes_delivery_faster <span class="passed">PASSED</span>              [ 10%]
+test_model.py::test_further_is_never_faster <span class="passed">PASSED</span>                       [ 20%]
+test_model.py::test_error_is_better_than_guessing <span class="passed">PASSED</span>                 [ 30%]
+test_model.py::test_heavier_traffic_is_never_faster <span class="passed">PASSED</span>               [ 40%]
+test_orders.py::test_minutes_per_km_simple <span class="passed">PASSED</span>                        [ 50%]
+test_orders.py::test_minutes_per_km_rejects_zero_distance <span class="passed">PASSED</span>         [ 60%]
+test_orders.py::test_good_order_is_accepted <span class="passed">PASSED</span>                       [ 70%]
+test_orders.py::test_bad_traffic_level_is_rejected <span class="passed">PASSED</span>                [ 80%]
+test_speed.py::test_slow_delivery <span class="passed">PASSED</span>                                 [ 90%]
+test_speed.py::test_negative_distance_raises <span class="passed">PASSED</span>                      [100%]
+
+<span class="summary">============================== 10 passed in 0.02s ==============================</span>
+<span class="user">divakarmaurya@MacBook-Pro</span> <span class="path">work</span> <span class="prompt">%</span> <span class="cursor"></span>
+  </div>
+</div>
+</body>
+</html>

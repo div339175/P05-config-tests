@@ -16,3 +16,5 @@ split:
 
 model:
   name: linear_regression
+training:
+  max_rows: 300
